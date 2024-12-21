@@ -62,11 +62,48 @@ export const Header = (props) => {
 
   }
 
+  const apiUrl = process.env.REACT_APP_BASE_URL;
+
 
   useEffect(() => {
     setNotificationState(notifications)
   }, [])
 
+
+  const [userData, setUserData] = useState()
+
+  console.log("userData", userData)
+
+  const PrfileDetail = () => {
+    const LogoutData = localStorage.getItem("login");
+    document.querySelector(".loaderBox").classList.remove("d-none");
+    fetch(`${apiUrl}/api/admin/profile`, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${LogoutData}`,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data?.data);
+        document.querySelector(".loaderBox").classList.add("d-none");
+        setUserData(data?.data);
+      })
+      .catch((error) => {
+        document.querySelector(".loaderBox").classList.add("d-none");
+        console.log(error);
+      });
+  };
+
+
+
+
+  console.log("userData", userData?.image)
+  useEffect(() => {
+    PrfileDetail()
+  }, [])
   return (
     <header>
       <Navbar className="customHeader" expand="md">
@@ -123,9 +160,9 @@ export const Header = (props) => {
                 >
                   <div className="userImage">
                     <img
-                      src={userImage}
-                      alt=""
-                      className="img-fluid"
+                      src={`${apiUrl}/${userData?.image}`}
+                    alt=""
+                    className="img-fluid"
                     />
                   </div>
                   {/* <img src={images.profilePic} alt="" className="img-fluid" /> */}

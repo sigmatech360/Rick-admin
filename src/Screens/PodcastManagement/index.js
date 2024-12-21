@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { Dropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEllipsisV, faEye, faCheck, faTimes, faFilter, faEdit , faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faEllipsisV, faEye, faCheck, faTimes, faFilter, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 import { DashboardLayout } from "../../Components/Layout/DashboardLayout";
 import CustomTable from "../../Components/CustomTable";
@@ -24,7 +24,7 @@ export const PodcastManagement = () => {
   const [showModal3, setShowModal3] = useState(false);
 
 
-  const [removepodcast , setRemoveposcast] = useState()
+  const [removepodcast, setRemoveposcast] = useState()
   const [showModal4, setShowModal4] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(8);
@@ -186,7 +186,7 @@ export const PodcastManagement = () => {
                               {item?.title}
                             </td>
                             <td>{item?.created_at}</td>
- 
+
                             <td>
                               <Dropdown className="tableDropdown">
                                 <Dropdown.Toggle variant="transparent" className="notButton classicToggle">
@@ -194,9 +194,9 @@ export const PodcastManagement = () => {
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu align="end" className="tableDropdownMenu">
 
-                                  <Link to={`/category-management/category-details/${item?.id}`} className="tableAction"><FontAwesomeIcon icon={faEye} className="tableActionIcon" />View</Link>
+                                  {/* <Link to={`/category-management/category-details/${item?.id}`} className="tableAction"><FontAwesomeIcon icon={faEye} className="tableActionIcon" />View</Link> */}
                                   <Link to={`/podcast-management/edit-podcast/${item?.id}`} className="tableAction"><FontAwesomeIcon icon={faEdit} className="tableActionIcon" />Edit</Link>
-    <button
+                                  <button
                                     type="button"
                                     className="bg-transparent border-0 ps-lg-3 pt-1"
                                     onClick={() => {

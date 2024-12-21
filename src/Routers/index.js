@@ -29,21 +29,13 @@ import { AddAnnouncement } from "../Screens/AnnouncementManagement/AddAnnounceme
 import { AnnouncementDetail } from "../Screens/AnnouncementManagement/AnnouncementDetail";
 import { EditAnnouncement } from "../Screens/AnnouncementManagement/EditAnnouncement";
 import { CustomerSupport } from "../Screens/CustomerSupport";
-import { CurrencyManagement } from "../Screens/CurrencyManagement";
-
-// end
-
+ 
 import { UserManagement } from "../Screens/UserManagement";
 import { UserDetail } from "../Screens/UserManagement/UserDetail";
 import { AddUser } from "../Screens/UserManagement/AddUser";
 import { EditUser } from "../Screens/UserManagement/EditUser";
 
-import { BrandListing } from "../Screens/BrandListing";
-
-
-// import { UnitTarget } from "../Screens/UnitTarget";
-// import { TargetDetails } from "../Screens/UnitTarget/targetDetails";
-
+ 
 import Profile from "../Screens/Profile";
 import EditProfile from "../Screens/Profile/EditProfile";
 import ChangePassword from "../Screens/Profile/ChangePassword";
@@ -74,18 +66,10 @@ export default function AdminRouter() {
 
         <Route path="/dashboard" element={<ProtectedRoutes Components={Dashboard} />} />
 
-        {/* <Route path="/role-management" element={<ProtectedRoutes Components={Roles} />} /> */}
-
-        {/* <Route path="/lead-listing" element={<ProtectedRoutes Components={LeadListing} />} />
-         <Route path="/lead-detail/:id" element={<ProtectedRoutes Components={DetailListing} />} />
-        <Route path="/add-lead/" element={<ProtectedRoutes Components={AddLead} />} /> */}
-
+    
         {/* book routes  */}
         <Route path="/volunteer-management" element={<ProtectedRoutes Components={VolunteerManagement} />} />
-        {/* <Route path="/add-book" element={<ProtectedRoutes Components={AddBook} />} />
-        <Route path="/book-management/book-details/:id" element={<ProtectedRoutes Components={BookDetails} />} />
-        <Route path="/book-management/edit-book/:id" element={<ProtectedRoutes Components={EditBook} />} /> */}
-
+     
         <Route path="/event-management" element={<ProtectedRoutes Components={EventManagement} />} />
         <Route path="/add-event" element={<ProtectedRoutes Components={AddEvent} />} />
         <Route path="/event-management/event-details/:id" element={<ProtectedRoutes Components={EventDetails} />} />
@@ -127,16 +111,14 @@ export default function AdminRouter() {
 
 
         <Route path="/sponsorship-management" element={<ProtectedRoutes Components={SponsorshipManagement} />} />
-        {/* <Route path="/add-project" element={<ProtectedRoutes Components={AddS} />} /> */}
-        <Route path="/sponsorship-management/sponsorship-details/:id" element={<ProtectedRoutes Components={ShonsorshipUserDetail} />} />
+         <Route path="/sponsorship-management/sponsorship-details/:id" element={<ProtectedRoutes Components={ShonsorshipUserDetail} />} />
         <Route path="/sponsorship-management/edit-sponsorship/:id" element={<ProtectedRoutes Components={SponsorshipUserEdit} />} />
 
 
 
 
         <Route path="/customer-support" element={<ProtectedRoutes Components={CustomerSupport} />} />
-        <Route path="/currency-management" element={<ProtectedRoutes Components={CurrencyManagement} />} />
-
+  
 
 
         {/* end  */}
@@ -145,12 +127,7 @@ export default function AdminRouter() {
         <Route path="/add-user/" element={<ProtectedRoutes Components={AddUser} />} />
         <Route path="/edit-user/:id" element={<ProtectedRoutes Components={EditUser} />} />
 
-        {/* <Route path="/unit-listing" element={<ProtectedRoutes Components={UnitListing} />} /> */}
-        <Route path="/brand-listing" element={<ProtectedRoutes Components={BrandListing} />} />
-        {/* <Route path="/department-management/depart-details/:id" element={<ProtectedRoutes Components={DepartDetails} />} /> */}
-
-        {/* <Route path="/target-listing" element={<ProtectedRoutes Components={UnitTarget} />} /> */}
-        {/* <Route path="/target-listing/target-detail/:id" element={<ProtectedRoutes Components={TargetDetails} />} /> */}
+ 
         <Route path="/profile" element={<ProtectedRoutes Components={Profile} />} />
         <Route path="/profile/edit-profile" element={<ProtectedRoutes Components={EditProfile} />} />
         <Route path="/profile/change-password" element={<ChangePassword />} />
