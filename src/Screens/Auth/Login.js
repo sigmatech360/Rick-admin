@@ -8,7 +8,7 @@ import CustomButton from "../../Components/CustomButton";
 import CustomInput from "../../Components/CustomInput";
 
 const AdminLogin = () => {
-  const apiUrl = `${process.env.REACT_APP_BASE_URL}/api/user-login`;
+  const apiUrl = `${process.env.REACT_APP_BASE_URL}/api/admin/login`;
 
 
 
