@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { currentUser } from "./../../Config/Data";
 
 import { DashboardLayout } from "../../Components/Layout/DashboardLayout";
-
+import BackButton from "../../Components/BackButton";
 import placeholderimage from '../../Assets/images/placeholderimage.png'
 import CustomButton from "../../Components/CustomButton";
 
@@ -61,7 +61,7 @@ const Profile = () => {
                     <div className="row mb-3">
                         <div className="col-12">
                             <h2 className="mainTitle">
-                                My Profile
+                                <BackButton />Profile
                             </h2>
                         </div>
                     </div>
