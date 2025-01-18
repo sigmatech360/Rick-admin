@@ -12,7 +12,7 @@ export const ProjectManagementdetail = () => {
 
     const { id } = useParams();
 
-    const base_url = 'https://custom.mystagingserver.site/Tim-WDLLC/public/'
+    const base_url = 'https://server.testlinkwebsitespace.com/hisoc/public/'
 
     const [data, setData] = useState({});
 
@@ -49,7 +49,7 @@ export const ProjectManagementdetail = () => {
         const LogoutData = localStorage.getItem('login');
         document.title = 'Hisoc Admin | Chapter Detail';
         document.querySelector('.loaderBox').classList.remove("d-none");
-        fetch(`https://custom.mystagingserver.site/Tim-WDLLC/public/api/admin/book_view/${id}`,
+        fetch(`https://custom.mystagingserver.site/Tim-WDLLC/public/api/admin/program/${id}`,
             {
                 method: 'GET',
                 headers: {
@@ -76,7 +76,7 @@ export const ProjectManagementdetail = () => {
     }
     useEffect(() => {
         chapterData()
-    }, []);
+    }, [id]);
     console.log(data)
 
     const handleSubmit = (e) => {
@@ -131,7 +131,7 @@ export const ProjectManagementdetail = () => {
                         <div className="col-12 mb-2">
                             <h2 className="mainTitle">
                                 <BackButton />
-                                Book Details
+                                Programs Details
                             </h2>
                         </div>
                     </div>

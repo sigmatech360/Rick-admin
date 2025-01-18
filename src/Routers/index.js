@@ -13,12 +13,15 @@ import { VolunteerManagement } from "../Screens/VolunteerManagement";
 import { EventManagement } from "../Screens/EventManagement";
 import { EditEvent } from "../Screens/EventManagement/EditEvent";
 import { AddEvent } from "../Screens/EventManagement/AddEvent";
-import { EventDetails } from "../Screens/EventManagement/EventDetails";
+import { EventDetail } from "../Screens/EventManagement/EventDetail";
 
 import { ProgramManagement } from "../Screens/ProgramManagement";
+import {ProgramDetail} from '../Screens/ProgramManagement/ProgramDetail'
 import { AddProgram } from '../Screens/ProgramManagement/AdProgram'
 import { EditProgram } from '../Screens/ProgramManagement/EditProgram'
 import { ChapterDetails } from '../Screens/ProgramManagement/ChapterDetails'
+
+
 
 import { PodcastManagement } from "../Screens/PodcastManagement";
 import { AddPodcast } from "../Screens/PodcastManagement/AddPodcast";
@@ -29,13 +32,13 @@ import { AddAnnouncement } from "../Screens/AnnouncementManagement/AddAnnounceme
 import { AnnouncementDetail } from "../Screens/AnnouncementManagement/AnnouncementDetail";
 import { EditAnnouncement } from "../Screens/AnnouncementManagement/EditAnnouncement";
 import { CustomerSupport } from "../Screens/CustomerSupport";
- 
+
 import { UserManagement } from "../Screens/UserManagement";
 import { UserDetail } from "../Screens/UserManagement/UserDetail";
 import { AddUser } from "../Screens/UserManagement/AddUser";
 import { EditUser } from "../Screens/UserManagement/EditUser";
 
- 
+
 import Profile from "../Screens/Profile";
 import EditProfile from "../Screens/Profile/EditProfile";
 import ChangePassword from "../Screens/Profile/ChangePassword";
@@ -52,6 +55,7 @@ import { MemberManagement } from "../Screens/MemberManagement";
 import { AddMember } from "../Screens/MemberManagement/AddMember";
 import { MemberDetail } from "../Screens/MemberManagement/MemberDetail";
 import { EditMember } from "../Screens/MemberManagement/EditMember";
+import { VoluinteerDetail } from "../Screens/VolunteerManagement/VolunteerDetail";
 
 
 export default function AdminRouter() {
@@ -66,18 +70,24 @@ export default function AdminRouter() {
 
         <Route path="/dashboard" element={<ProtectedRoutes Components={Dashboard} />} />
 
-    
+
         {/* book routes  */}
         <Route path="/volunteer-management" element={<ProtectedRoutes Components={VolunteerManagement} />} />
-     
+        <Route path="/volunteer-management/volunteer-details/:id" element={<ProtectedRoutes Components={VoluinteerDetail} />} />
+
+
         <Route path="/event-management" element={<ProtectedRoutes Components={EventManagement} />} />
         <Route path="/add-event" element={<ProtectedRoutes Components={AddEvent} />} />
-        <Route path="/event-management/event-details/:id" element={<ProtectedRoutes Components={EventDetails} />} />
+        <Route path="/event-management/event-details/:id" element={<ProtectedRoutes Components={EventDetail} />} />
         <Route path="/event-management/edit-event/:id" element={<ProtectedRoutes Components={EditEvent} />} />
 
         <Route path="/programs-management" element={<ProtectedRoutes Components={ProgramManagement} />} />
+        <Route path="/programs-management/program-details/:id" element={<ProtectedRoutes Components={ProgramDetail} />} />
+
+
+
         <Route path="/add-program" element={<ProtectedRoutes Components={AddProgram} />} />
-        <Route path="/programs-management/program-details/:id" element={<ProtectedRoutes Components={ChapterDetails} />} />
+        {/* <Route path="/programs-management/program-details/:id" element={<ProtectedRoutes Components={ChapterDetails} />} /> */}
         <Route path="/programs-management/edit-program/:id" element={<ProtectedRoutes Components={EditProgram} />} />
 
         <Route path="/podcast-management" element={<ProtectedRoutes Components={PodcastManagement} />} />
@@ -111,14 +121,14 @@ export default function AdminRouter() {
 
 
         <Route path="/sponsorship-management" element={<ProtectedRoutes Components={SponsorshipManagement} />} />
-         <Route path="/sponsorship-management/sponsorship-details/:id" element={<ProtectedRoutes Components={ShonsorshipUserDetail} />} />
+        <Route path="/sponsorship-management/sponsorship-details/:id" element={<ProtectedRoutes Components={ShonsorshipUserDetail} />} />
         <Route path="/sponsorship-management/edit-sponsorship/:id" element={<ProtectedRoutes Components={SponsorshipUserEdit} />} />
 
 
 
 
         <Route path="/customer-support" element={<ProtectedRoutes Components={CustomerSupport} />} />
-  
+
 
 
         {/* end  */}
@@ -127,7 +137,7 @@ export default function AdminRouter() {
         <Route path="/add-user/" element={<ProtectedRoutes Components={AddUser} />} />
         <Route path="/edit-user/:id" element={<ProtectedRoutes Components={EditUser} />} />
 
- 
+
         <Route path="/profile" element={<ProtectedRoutes Components={Profile} />} />
         <Route path="/profile/edit-profile" element={<ProtectedRoutes Components={EditProfile} />} />
         <Route path="/profile/change-password" element={<ChangePassword />} />

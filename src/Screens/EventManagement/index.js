@@ -5,7 +5,7 @@ import { Dropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEllipsisV,
-
+  faEye,
   faEdit,
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
@@ -207,7 +207,7 @@ export const EventManagement = () => {
                                   align="end"
                                   className="tableDropdownMenu"
                                 >
-                                  {/* <Link to={`/category-management/event-details/${item?.id}`} className="tableAction"><FontAwesomeIcon icon={faEye} className="tableActionIcon" />View</Link> */}
+                                  <Link to={`/event-management/event-details/${item?.id}`} className="tableAction"><FontAwesomeIcon icon={faEye} className="tableActionIcon" />View</Link>
                                   <Link
                                     to={`/event-management/edit-event/${item?.id}`}
                                     className="tableAction"

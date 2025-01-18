@@ -213,8 +213,8 @@ export const ProgramManagement = () => {
                                       icon={faTrash}
                                     ></FontAwesomeIcon>{" "}
                                     Delete
-                                  </button>
-                                  {/* <Link to={`/chapter-management/chapter-details/${item?.id}`} className="tableAction"><FontAwesomeIcon icon={faEye} className="tableActionIcon" />View</Link> */}
+                                  </button>  
+                                  <Link to={`/programs-management/program-details/${item?.id}`} className="tableAction"><FontAwesomeIcon icon={faEye} className="tableActionIcon" />View</Link>
                                   <Link to={`/programs-management/edit-program/${item?.id}`} className="tableAction"><FontAwesomeIcon icon={faEdit} className="tableActionIcon" />Edit</Link>
 
                                 </Dropdown.Menu>

@@ -122,7 +122,7 @@ export const Dashboard = () => {
               <div className="dashCard">
                 <div className="d-flex flex-wrap justify-content-between">
                   <h3 className="mainTitle">Total Users</h3>
-                  <SelectBox selectClass="mainInput" name="Monthly" required option={'optionData'}
+                  <SelectBox  selectClass="mainInput" name="Monthly" required option={'optionData'}
 
                   />
                 </div>

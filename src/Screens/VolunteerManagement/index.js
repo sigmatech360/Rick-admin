@@ -203,7 +203,7 @@ export const VolunteerManagement = () => {
                                   <FontAwesomeIcon icon={faEllipsisV} />
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu align="end" className="tableDropdownMenu">
-                                  <Link to={`/volunteer-management/edit-volunteer/${item?.id}`} className="tableAction"><FontAwesomeIcon icon={faEye} className="tableActionIcon" />View</Link>
+                                  <Link to={`/volunteer-management/volunteer-details/${item?.id}`} className="tableAction"><FontAwesomeIcon icon={faEye} className="tableActionIcon" />View</Link>
                                   {/* <Link to={`/volunteer-management/volunteer-details/${item?.id}`} className="tableAction"><FontAwesomeIcon icon={faTrash} className="tableActionIcon" />Delete</Link> */}
                                   {/* <Link to={`/volunteer-management/edit-volunteer/${item?.id}`} className="tableAction"><FontAwesomeIcon icon={faEye} className="tableActionIcon" />View</Link> */}
 

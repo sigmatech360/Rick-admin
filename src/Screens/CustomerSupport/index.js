@@ -51,13 +51,13 @@ export const CustomerSupport = () => {
     setInputValue(e.target.value);
   }
 
-  const filterData = data.filter(item =>
+  const filterData = data?.filter(item =>
     item.ad_title.toLowerCase().includes(inputValue.toLowerCase())
   );
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = filterData.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = filterData?.slice(indexOfFirstItem, indexOfLastItem);
 
 
   const AdsListing = () => {
@@ -80,7 +80,7 @@ export const CustomerSupport = () => {
       .then((data) => {
         console.log(data)
         document.querySelector('.loaderBox').classList.add("d-none");
-        setData(data.data);
+        setData(data?.data);
       })
       .catch((error) => {
         document.querySelector('.loaderBox').classList.add("d-none");
@@ -249,7 +249,7 @@ export const CustomerSupport = () => {
                     </CustomTable>
                     {/* <CustomPagination
                       itemsPerPage={itemsPerPage}
-                      totalItems={data.length}
+                      totalItems={data?.length}
                       currentPage={currentPage}
                       onPageChange={handlePageChange}
                     /> */}
